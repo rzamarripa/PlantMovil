@@ -15,6 +15,13 @@ import RoutesConfig from '../routes';
 //Directives
 import {MyTabsDirective, MyTabDirective} from '../directives/MyTabs.directive';
 import {ValidPinDirective} from '../directives/ValidPin.directive';
+import {ShowHideInputDirective} from '../directives/showHideInput.directive';
+import {BiggerTextDirective, SmallerTextDirective} from '../directives/text.directive';
+import {IonicYoutubeVideoDirective} from '../directives/ionicYoutubeVideo.directive';
+import {PostContentDirective} from '../directives/postContent.directive';
+import {DynamicAnchorFixDirective} from '../directives/dynamicAnchorFix.directive';
+import {MultiBgDirective, BgDirective} from '../directives/bg.directive';
+import {PreImgDirective} from '../directives/preImg.directive';
  
 const App = 'MasoftTemplate';
  
@@ -29,6 +36,15 @@ new Loader(App)
 	.load(MyTabsDirective)
 	.load(MyTabDirective)
 	.load(ValidPinDirective)
+	.load(ShowHideInputDirective)
+	.load(BiggerTextDirective)
+	.load(SmallerTextDirective)
+	.load(IonicYoutubeVideoDirective)
+	.load(PostContentDirective)
+	.load(DynamicAnchorFixDirective)
+	.load(MultiBgDirective)
+	.load(BgDirective)
+	.load(PreImgDirective)
 	.load(RoutesConfig);
 
 // Startup

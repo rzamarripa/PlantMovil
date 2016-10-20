@@ -25,4 +25,4 @@ export  class ShowHideContainerDirective extends Directive{
 }
 
 ShowHideContainerDirective.$name = 'showHideContainer';
-ShowHideContainerDirective.$inject = ['$scope'];
+//ShowHideContainerDirective.$inject = ['$scope'];

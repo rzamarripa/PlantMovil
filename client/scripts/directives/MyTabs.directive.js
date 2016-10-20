@@ -28,7 +28,7 @@ export  class MyTabsDirective extends Directive{
 }
 
 MyTabsDirective.$name = 'myTabs';
-MyTabsDirective.$inject = ['$scope'];
+//MyTabsDirective.$inject = ['$scope'];
 
 export  class MyTabDirective extends Directive{
 	constructor(){
