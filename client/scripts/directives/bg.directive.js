@@ -41,7 +41,8 @@ export  class MultiBgDirective extends Directive{
 				utils.setBackground($scope.multiBg[0]);
 			}
 		}
-	}	
+	}
+	link(){}	
 }
 
 MultiBgDirective.$name = 'multiBg';

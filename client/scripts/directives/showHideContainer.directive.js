@@ -22,6 +22,7 @@ export  class ShowHideContainerDirective extends Directive{
 			$scope.$broadcast("toggle-type", $scope.show);
 		};
 	}	
+	link(){}
 }
 
 ShowHideContainerDirective.$name = 'showHideContainer';

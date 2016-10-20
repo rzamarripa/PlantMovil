@@ -8,7 +8,7 @@ export  class PreImgDirective extends Directive{
 			ratio:'@',
 			helperClass: '@'
 		};
-		this.transclude = false;
+		this.transclude = true;
 		this.templateUrl = 'client/templates/common/pre-img.html';
 	}
 	controller($scope) {
@@ -20,10 +20,9 @@ export  class PreImgDirective extends Directive{
 			});
 		};
 	}
+	link(){}
 }
 
 PreImgDirective.$name = 'preImg';
-
-
-
+//PreImgDirective.$inject = ['$scope'];
 

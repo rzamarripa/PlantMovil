@@ -23,6 +23,7 @@ export  class IonicYoutubeVideoDirective extends Directive{
 			}
 		});
 	}	
+	link(){}
 }
 
 IonicYoutubeVideoDirective.$name = 'ionicYoutubeVideo';

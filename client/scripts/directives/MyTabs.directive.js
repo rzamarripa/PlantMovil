@@ -25,6 +25,7 @@ export  class MyTabsDirective extends Directive{
 				tabs.push(tab);
 			};
 	}	
+	link(){}
 }
 
 MyTabsDirective.$name = 'myTabs';
