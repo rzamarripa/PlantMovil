@@ -35,6 +35,15 @@ export default class RoutesConfig extends Config {
           }
         }
       })
+      .state('app.editarReunion', {
+        url: '/editarReunion/:reunionId',
+        views: {
+          'menuContent': {
+            templateUrl: 'client/templates/reuniones/form.html',
+            controller: 'NuevaReunionCtrl as nrc'
+          }
+        }
+      })
       .state('app.acuerdos', {
         url: '/acuerdos',
         views: {
