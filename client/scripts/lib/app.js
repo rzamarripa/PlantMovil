@@ -12,14 +12,18 @@ import 'wb-angular-slugify';
 
 import Angular from 'angular';
 import Loader from 'angular-ecmascript/module-loader';
+
+import { Meteor } from 'meteor/meteor';
+
+
+//Controllers
 import HomeCtrl from '../controllers/home.controller';
 import ReunionesCtrl from '../controllers/reuniones.controller';
 import NuevaReunionCtrl from '../controllers/nuevaReunion.controller';
 import AcuerdosCtrl from '../controllers/acuerdos.controller';
 import NuevoAcuerdoCtrl from '../controllers/nuevoAcuerdo.controller';
 import AgendaCtrl from '../controllers/agenda.controller';
-import { Meteor } from 'meteor/meteor';
- 
+
 // Modules
 import RoutesConfig from '../routes';
 
@@ -52,6 +56,8 @@ import {IAdFactory} from '../factories/iAd.factory';
 import {NodePushServerFactory} from '../factories/nodePushServer.factory';
 
 
+
+
 const App = 'MasoftTemplate';
  
 // App
@@ -79,7 +85,7 @@ Angular.module(App, [
 				StatusBar.styleDefault();
 			}
 
-			PushNotificationsService.register();
+			//PushNotificationsService.register();
 			
 		});
 		if (!Meteor.isCordova) 
@@ -93,7 +99,7 @@ Angular.module(App, [
 				StatusBar.styleDefault();
 			}
 
-			PushNotificationsService.register();
+			//PushNotificationsService.register();
 			
 		});
 

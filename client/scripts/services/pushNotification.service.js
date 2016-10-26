@@ -4,8 +4,9 @@ export class PushNotificationsService extends Service {
 	
 	constructor ($rootScope, $cordovaPush, NodePushServer, GCM_SENDER_ID){
 		super(...arguments);
-		console.log($rootScope, $cordovaPush, NodePushServer, GCM_SENDER_ID)
+		//console.log($rootScope, $cordovaPush, NodePushServer, GCM_SENDER_ID)
 		this.$rootScope =$rootScope;
+		this.$cordovaPush = $cordovaPush;
 	}
 	register(){
 		console.log(this.$rootScope)
@@ -86,7 +87,7 @@ export class PushNotificationsService extends Service {
 				"alert": true
 			};
 
-			$cordovaPush.register(config).then(function(result) {
+			this.$cordovaPush.register(config).then(function(result) {
 				// Success -- send deviceToken to server, and store for future use
 				console.log("result: " + result);
 				NodePushServer.storeDeviceToken("ios", result);
@@ -94,7 +95,7 @@ export class PushNotificationsService extends Service {
 				console.log("Registration error: " + err);
 			});
 
-			$rootScope.$on('$cordovaPush:notificationReceived', function(event, notification) {
+			this.$rootScope.$on('$cordovaPush:notificationReceived', function(event, notification) {
 				console.log(notification.alert, "Push Notification Received");
 			});
 		}
@@ -102,5 +103,5 @@ export class PushNotificationsService extends Service {
 }
 
 PushNotificationsService.$name = 'PushNotificationsService';
-//PushNotificationsService.$inject = ['$rootScope', '$cordovaPush', 'NodePushServer', 'GCM_SENDER_ID'];
+PushNotificationsService.$inject = ['$rootScope', '$cordovaPush', 'NodePushServer', 'GCM_SENDER_ID'];
 

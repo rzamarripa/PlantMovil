@@ -16,8 +16,15 @@
 -->
 
     <div class="entries-list">
-			Aquí mis reuniones
-      
+			
+      <div ng-repeat="entry in rc.reuniones" class="list card entry-item">
+        <div class="entry-heading item item-text-wrap">
+          <h2 class="entry-title">{{entry.titulo}}</h2>
+          <p class="entry-author">
+            Fecha: <span>{{entry.fecha|date:"dd/MM/yyyy"}} {{entry.horaInicio|date:"shortTime"}}</span>
+          </p>
+        </div>
+      </div>
     </div>
   </ion-content>
 </ion-view>

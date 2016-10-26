@@ -22,7 +22,7 @@ export default class RoutesConfig extends Config {
         views: {
           'menuContent': {
             templateUrl: 'client/templates/reuniones/reuniones.html',
-            controller: 'ReunionesCtrl'
+            controller: 'ReunionesCtrl as rc'
           }
         }
       })
@@ -31,7 +31,7 @@ export default class RoutesConfig extends Config {
         views: {
           'menuContent': {
             templateUrl: 'client/templates/reuniones/form.html',
-            controller: 'NuevaReunionCtrl'
+            controller: 'NuevaReunionCtrl as nrc'
           }
         }
       })
