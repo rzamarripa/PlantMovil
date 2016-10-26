@@ -1,8 +1,14 @@
 import { Service } from 'angular-ecmascript/module-helpers';
  
 export class PushNotificationsService extends Service {
-	register($rootScope, $cordovaPush, NodePushServer, GCM_SENDER_ID){
-		console.log("push")
+	
+	constructor ($rootScope, $cordovaPush, NodePushServer, GCM_SENDER_ID){
+		super(...arguments);
+		console.log($rootScope, $cordovaPush, NodePushServer, GCM_SENDER_ID)
+		this.$rootScope =$rootScope;
+	}
+	register(){
+		console.log(this.$rootScope)
 		var config = {};
 
 		// ANDROID PUSH NOTIFICATIONS
@@ -96,5 +102,5 @@ export class PushNotificationsService extends Service {
 }
 
 PushNotificationsService.$name = 'PushNotificationsService';
-PushNotificationsService.$inject = ['$rootScope', '$cordovaPush', 'NodePushServer', 'GCM_SENDER_ID'];
+//PushNotificationsService.$inject = ['$rootScope', '$cordovaPush', 'NodePushServer', 'GCM_SENDER_ID'];
 

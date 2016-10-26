@@ -5,7 +5,7 @@ import 'angular-sanitize';
 import 'angular-resource';
 import 'angular-ui-router';
 import 'ionic-scripts';
-import 'ngMap';
+import 'ngmap';
 import 'ng-cordova';
 import 'angular-youtube-embed';
 import 'wb-angular-slugify';
