@@ -49,7 +49,7 @@ export default class RoutesConfig extends Config {
         views: {
           'menuContent': {
             templateUrl: 'client/templates/acuerdos/acuerdos.html',
-            controller: 'AcuerdosCtrl'
+            controller: 'AcuerdosCtrl as ac'
           }
         }
       })
@@ -58,7 +58,7 @@ export default class RoutesConfig extends Config {
         views: {
           'menuContent': {
             templateUrl: 'client/templates/acuerdos/form.html',
-            controller: 'NuevoAcuerdoCtrl'
+            controller: 'NuevoAcuerdoCtrl as nac'
           }
         }
       })
@@ -68,6 +68,24 @@ export default class RoutesConfig extends Config {
           'menuContent': {
             templateUrl: 'client/templates/agenda/agenda.html',
             controller: 'AgendaCtrl'
+          }
+        }
+      })
+      .state('app.categorias', {
+        url: '/categorias',
+        views: {
+          'menuContent': {
+            templateUrl: 'client/templates/categorias/categorias.html',
+            controller: 'CategoriasCtrl as cc'
+          }
+        }
+      })
+      .state('app.nuevaCategoria', {
+        url: '/categoriaNueva',
+        views: {
+          'menuContent': {
+            templateUrl: 'client/templates/categorias/form.html',
+            controller: 'NuevaCategoriaCtrl as ncc'
           }
         }
       });

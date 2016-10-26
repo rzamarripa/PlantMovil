@@ -1,0 +1,27 @@
+<ion-view class="layouts-view">
+  <ion-nav-buttons side="right">
+    <button menu-toggle="right" class="button button-icon icon ion-plus" ui-sref="app.nuevaCategoria"></button>
+  </ion-nav-buttons>
+  <ion-nav-title>
+    <span>Categorías</span>
+  </ion-nav-title>
+  <ion-content>
+    <!-- Refresh to get the new posts -->
+<!--
+    <ion-refresher pulling-text="Pull to refresh..." on-refresh="r.doRefresh()">
+    </ion-refresher>
+-->
+
+    <div class="entries-list">
+			
+      <div ng-repeat="categoria in rc.categorias" class="list card entry-item"  ui-sref="app.editarCategoria({categoriaId: categoria._id})">
+        <div class="entry-heading item item-text-wrap" >
+          <h2 class="entry-title">{{categoria.titulo}}</h2>
+          <p class="entry-author">
+            Color: <span>{{categoria.color}}</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

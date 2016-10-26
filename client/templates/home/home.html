@@ -2,9 +2,6 @@
   <ion-nav-buttons side="left">
     <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
   </ion-nav-buttons>
-  <ion-nav-buttons side="right">
-    <button menu-toggle="right" class="button button-icon icon ion-plus" ui-sref="app.nuevaReunion"></button>
-  </ion-nav-buttons>
   <ion-nav-title>
     <span>Menú</span>
   </ion-nav-title>
@@ -18,35 +15,39 @@
 		    Acuerdos
 		  </div>
 		  
-		    <div class="list">
-
-				  <a href="#" class="item item-icon-left">
-				    <i class="icon ion-home"></i>
-				    Vencidos
-				  </a>
-				
-				  <a href="#" class="item item-icon-left">
-				    <i class="icon ion-ios-telephone"></i>
-				    Hoy
-				  </a>
-				
-				  <a href="#" class="item item-icon-left">
-				    <i class="icon ion-wifi"></i>
-				    Semana
-				  </a>
-				
-				  <a href="#" class="item item-icon-left">
-				    <i class="icon ion-card"></i>
-				    Mes
-				  </a>
-				  
-				  <a href="#" class="item item-icon-left">
-				    <i class="icon ion-card"></i>
-				    Futuros
-				  </a>
-				
-				</div>
+	    <div class="list">
+			  <a href="#" class="item item-icon-left">
+			    <i class="icon fa fa-calendar-minus-o"></i>
+			    Vencidos
+			    <span class="badge badge-assertive">0</span>
+			  </a>			
+			  <a href="#" class="item item-icon-left">
+			    <i class="icon fa fa-calendar-check-o"></i>
+			    Hoy
+			    <span class="badge badge-assertive">0</span>
+			  </a>			
+			  <a href="#" class="item item-icon-left">
+			    <i class="icon fa fa-calendar-o"></i>
+			    Semana
+			    <span class="badge badge-assertive">0</span>
+			  </a>			
+			  <a href="#" class="item item-icon-left">
+			    <i class="icon fa fa-calendar"></i>
+			    Mes
+			    <span class="badge badge-assertive">0</span>
+			  </a>			  
+			  <a href="#" class="item item-icon-left">
+			    <i class="icon fa fa-calendar-plus-o"></i>
+			    Futuros
+			    <span class="badge badge-assertive">0</span>
+			  </a>			
+			</div>
 		
+		  <a class="item item-icon-left assertive" href="#" ui-sref="app.nuevoAcuerdo">
+		    <i class="icon ion-plus"></i>
+		    Agregar Acuerdo
+		  </a>
+
 		</div>
   </ion-content>
 </ion-view>

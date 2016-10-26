@@ -7,6 +7,10 @@
   </ion-nav-title>
   <ion-content>
     <ul class="list list-inset">
+	    <label class="item item-input">
+        <span class="input-label">Título</span>
+        <input type="text" ng-model='nrc.reunion.titulo'>
+      </label>
       <label class="item item-input item-stacked-label">
         <span class="input-label">Fecha</span>
         <input type="date" ng-model='nrc.reunion.fecha'>
@@ -28,15 +32,11 @@
 			      <option>Roja</option>
 			    </select>
 		    </label>
-		    <button class="button button-small icon ion-plus"></button>
+		    <button class="button button-small icon ion-plus" ui-sref="app.categorias"></button>
 		  </div>
       <label class="item item-input">
         <span class="input-label">Ubicación</span>
         <input type="text" ng-model='nrc.reunion.ubicacion'>
-      </label>
-      <label class="item item-input">
-        <span class="input-label">Título</span>
-        <input type="text" ng-model='nrc.reunion.titulo'>
       </label>
       <div class="item item-input-inset">
 	      <span class="input-label">Temas</span>
@@ -47,7 +47,7 @@
 		  </div>
 			<label class="item item-input">
         <span class="input-label">Convoca</span>
-        <input type="text" value="Roberto Zamarripa" ng-model='nrc.reunion.temas'>
+        <input type="text" value="Roberto Zamarripa" ng-model='nrc.reunion.convoca'>
       </label>
       <div class="item item-input-inset">
 	      <span class="input-label">Participantes</span>

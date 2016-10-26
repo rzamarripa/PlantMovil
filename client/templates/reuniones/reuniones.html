@@ -17,11 +17,11 @@
 
     <div class="entries-list">
 			
-      <div ng-repeat="entry in rc.reuniones" class="list card entry-item"  ui-sref="app.editarReunion({reunionId: entry._id})">
+      <div ng-repeat="reunion in rc.reuniones" class="list card entry-item"  ui-sref="app.editarReunion({reunionId: reunion._id})">
         <div class="entry-heading item item-text-wrap" >
-          <h2 class="entry-title">{{entry.titulo}}</h2>
+          <h2 class="entry-title">{{reunion.titulo}} <span class="item-note">{{reunion.categoria}}</span></h2>
           <p class="entry-author">
-            Fecha: <span>{{entry.fecha|date:"dd/MM/yyyy"}} {{entry.horaInicio|date:"shortTime"}}</span>
+            Fecha: <span>{{reunion.fecha|date:"dd/MM/yyyy"}} {{reunion.horaInicio|date:"shortTime"}}</span>
           </p>
         </div>
       </div>

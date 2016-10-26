@@ -23,6 +23,8 @@ import NuevaReunionCtrl from '../controllers/nuevaReunion.controller';
 import AcuerdosCtrl from '../controllers/acuerdos.controller';
 import NuevoAcuerdoCtrl from '../controllers/nuevoAcuerdo.controller';
 import AgendaCtrl from '../controllers/agenda.controller';
+import CategoriasCtrl from '../controllers/categorias.controller';
+import NuevaCategoriaCtrl from '../controllers/nuevaCategoria.controller';
 
 // Modules
 import RoutesConfig from '../routes';
@@ -142,6 +144,7 @@ new Loader(App)
 	.load(NuevaReunionCtrl)
 	.load(NuevoAcuerdoCtrl)
 	.load(AgendaCtrl)
+	.load(CategoriasCtrl)
 	.load(MyTabsDirective)
 	.load(MyTabDirective)
 	.load(ValidPinDirective)
