@@ -12,7 +12,12 @@ import 'wb-angular-slugify';
 
 import Angular from 'angular';
 import Loader from 'angular-ecmascript/module-loader';
-import ChatsCtrl from '../controllers/chats.controller';
+import HomeCtrl from '../controllers/home.controller';
+import ReunionesCtrl from '../controllers/reuniones.controller';
+import NuevaReunionCtrl from '../controllers/nuevaReunion.controller';
+import AcuerdosCtrl from '../controllers/acuerdos.controller';
+import NuevoAcuerdoCtrl from '../controllers/nuevoAcuerdo.controller';
+import AgendaCtrl from '../controllers/agenda.controller';
 import { Meteor } from 'meteor/meteor';
  
 // Modules
@@ -125,7 +130,12 @@ Angular.module(App, [
 	});
  
 new Loader(App)
-	.load(ChatsCtrl)
+	.load(HomeCtrl)
+	.load(ReunionesCtrl)
+	.load(AcuerdosCtrl)
+	.load(NuevaReunionCtrl)
+	.load(NuevoAcuerdoCtrl)
+	.load(AgendaCtrl)
 	.load(MyTabsDirective)
 	.load(MyTabDirective)
 	.load(ValidPinDirective)

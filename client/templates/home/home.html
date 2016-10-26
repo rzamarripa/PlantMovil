@@ -1,0 +1,52 @@
+<ion-view class="layouts-view">
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <ion-nav-buttons side="right">
+    <button menu-toggle="right" class="button button-icon icon ion-plus" ui-sref="app.nuevaReunion"></button>
+  </ion-nav-buttons>
+  <ion-nav-title>
+    <span>Menú</span>
+  </ion-nav-title>
+  <ion-content>
+    <!-- Refresh to get the new posts -->
+    <ion-refresher pulling-text="Pull to refresh..." on-refresh="r.doRefresh()">
+    </ion-refresher>
+
+    <div class="card">
+		  <div class="item item-divider">
+		    Acuerdos
+		  </div>
+		  
+		    <div class="list">
+
+				  <a href="#" class="item item-icon-left">
+				    <i class="icon ion-home"></i>
+				    Vencidos
+				  </a>
+				
+				  <a href="#" class="item item-icon-left">
+				    <i class="icon ion-ios-telephone"></i>
+				    Hoy
+				  </a>
+				
+				  <a href="#" class="item item-icon-left">
+				    <i class="icon ion-wifi"></i>
+				    Semana
+				  </a>
+				
+				  <a href="#" class="item item-icon-left">
+				    <i class="icon ion-card"></i>
+				    Mes
+				  </a>
+				  
+				  <a href="#" class="item item-icon-left">
+				    <i class="icon ion-card"></i>
+				    Futuros
+				  </a>
+				
+				</div>
+		
+		</div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,89 @@
+<ion-view class="forms-view">
+  <ion-nav-buttons side="right">
+    <button menu-toggle="right" class="button button-clear button-positive">Guardar</button>
+  </ion-nav-buttons>
+  <ion-nav-title>
+    <span>Nuevo Acuerdo</span>
+  </ion-nav-title>
+  <ion-content>
+    <ul class="list list-inset">
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Fecha</span>
+        <input type="date">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Hora inicio</span>
+        <input type="time">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Hora fin</span>
+        <input type="time">
+      </label>
+      <div class="item item-input-inset">
+	      <span class="input-label">Categoría</span>
+		    <label class="item-input-wrapper">
+		      <select>
+			      <option value="{{categoria._id}}">{{categoria.nombre}}</option>
+			      <option selected>Verde</option>
+			      <option>Roja</option>
+			    </select>
+		    </label>
+		    <button class="button button-small icon ion-plus"></button>
+		  </div>
+      <label class="item item-input">
+        <span class="input-label">Ubicación</span>
+        <input type="text">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Título</span>
+        <input type="text">
+      </label>
+      <div class="item item-input-inset">
+	      <span class="input-label">Temas</span>
+		    <label class="item-input-wrapper">
+		      <input type="text" placeholder="Temas">
+		    </label>
+		    <button class="button button-small icon ion-plus"></button>
+		  </div>
+			<label class="item item-input">
+        <span class="input-label">Convoca</span>
+        <input type="text" value="Roberto Zamarripa">
+      </label>
+      <div class="item item-input-inset">
+	      <span class="input-label">Participantes</span>
+		    <label class="item-input-wrapper">
+		      <input type="text" placeholder="Participantes">
+		    </label>
+		    <button class="button button-small icon ion-plus"></button>
+		  </div>
+		  <label class="item item-input item-select">
+		    <div class="input-label">
+		      Repetir
+		    </div>
+		    <select>
+		      <option>Nunca</option>
+		      <option>Todos los días</option>
+		      <option>Cada semana</option>
+		      <option>Cada dos semanas</option>
+		      <option>Cada mes</option>
+		      <option>Cada año</option>
+		    </select>
+		  </label>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Hasta</span>
+        <input type="date">
+      </label>
+      <ul class="list">
+			  <li class="item item-toggle">
+			     Alertas
+			     <label class="toggle toggle-assertive">
+			       <input type="checkbox" checked>
+			       <div class="track">
+			         <div class="handle"></div>
+			       </div>
+			     </label>
+			  </li>
+			</ul>
+    </ul>
+  </ion-content>
+</ion-view>

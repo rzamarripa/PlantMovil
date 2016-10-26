@@ -14,7 +14,7 @@
   <ion-side-menu side="left" class="main-menu" expose-aside-when="large">
     <ion-content>
       <ion-list>
-        <ion-item class="heading-item item item-avatar" nav-clear menu-close ui-sref="app.profile">
+        <ion-item class="heading-item item item-avatar" nav-clear menu-close ui-sref="app.home">
           <div class="user-image-container">
             <pre-img ratio="_1_1" helper-class="rounded-image">
               <img class="user-image" ng-src="https://s3.amazonaws.com/uifaces/faces/twitter/brynn/128.jpg" spinner-on-load>
@@ -24,23 +24,22 @@
           <p class="message">Bienvenido</p>
         </ion-item>
         <ion-item class="item-icon-left" nav-clear menu-close ui-sref="app.reuniones">
-          <i class="icon ion-bookmark"></i>
+          <i class="icon fa fa-group"></i>
           <h2 class="menu-text">Reuniones</h2>
         </ion-item>
         <ion-item class="item-icon-left" nav-clear menu-close ui-sref="app.acuerdos">
-          <i class="icon ion-radio-waves"></i>
+          <i class="icon fa fa-check"></i>
           <h2 class="menu-text">Acuerdos</h2>
         </ion-item>
         <ion-item class="item-icon-left" nav-clear menu-close ui-sref="app.agenda">
-          <i class="icon ion-social-wordpress"></i>
+          <i class="icon fa fa-calendar"></i>
           <h2 class="menu-text">Agenda</h2>
         </ion-item>
         <ion-item class="item-icon-left" nav-clear menu-close ui-sref="app.configuracion">
           <i class="icon ion-gear-a"></i>
           <h2 class="menu-text">Configuración</h2>
         </ion-item>
-
-    </ion-list>
+      </ion-list>
     </ion-content>
   </ion-side-menu>
 </ion-side-menus>
