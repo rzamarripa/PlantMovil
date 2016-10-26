@@ -8,16 +8,17 @@ export default class RoutesConfig extends Config {
         abstract: true,
         templateUrl: 'client/templates/layout.html'
       })
-      .state('app.chats', {
-        url: '/chats',
+      .state('app.reuniones', {
+        url: '/reuniones',
         views: {
           'menuContent': {
-            templateUrl: 'client/templates/chats.html'
+            templateUrl: 'client/templates/reuniones.html',
+            controller: 'ReunionesCtrl as r'
           }
         }
       });
  
-    this.$urlRouterProvider.otherwise('app/chats');
+    this.$urlRouterProvider.otherwise('app/reuniones');
   }
 }
  
