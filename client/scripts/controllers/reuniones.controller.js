@@ -1,4 +1,5 @@
 import { Controller } from 'angular-ecmascript/module-helpers';
  
-export default class ChatsCtrl extends Controller {
+export default class ReunionesCtrl extends Controller {
+
 }

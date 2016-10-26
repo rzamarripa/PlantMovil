@@ -8,16 +8,62 @@ export default class RoutesConfig extends Config {
         abstract: true,
         templateUrl: 'client/templates/layout.html'
       })
-      .state('app.chats', {
-        url: '/chats',
+      .state('app.home', {
+        url: '/home',
         views: {
           'menuContent': {
-            templateUrl: 'client/templates/chats.html'
+            templateUrl: 'client/templates/home/home.html',
+            controller: 'HomeCtrl'
+          }
+        }
+      })
+      .state('app.reuniones', {
+        url: '/reuniones',
+        views: {
+          'menuContent': {
+            templateUrl: 'client/templates/reuniones/reuniones.html',
+            controller: 'ReunionesCtrl'
+          }
+        }
+      })
+      .state('app.nuevaReunion', {
+        url: '/reunionNueva',
+        views: {
+          'menuContent': {
+            templateUrl: 'client/templates/reuniones/form.html',
+            controller: 'NuevaReunionCtrl'
+          }
+        }
+      })
+      .state('app.acuerdos', {
+        url: '/acuerdos',
+        views: {
+          'menuContent': {
+            templateUrl: 'client/templates/acuerdos/acuerdos.html',
+            controller: 'AcuerdosCtrl'
+          }
+        }
+      })
+      .state('app.nuevoAcuerdo', {
+        url: '/acuerdoNuevo',
+        views: {
+          'menuContent': {
+            templateUrl: 'client/templates/acuerdos/form.html',
+            controller: 'NuevoAcuerdoCtrl'
+          }
+        }
+      })
+      .state('app.agenda', {
+        url: '/agenda',
+        views: {
+          'menuContent': {
+            templateUrl: 'client/templates/agenda/agenda.html',
+            controller: 'AgendaCtrl'
           }
         }
       });
  
-    this.$urlRouterProvider.otherwise('app/chats');
+    this.$urlRouterProvider.otherwise('app/home');
   }
 }
  
