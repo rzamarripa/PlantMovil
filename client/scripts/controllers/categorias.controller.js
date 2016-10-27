@@ -6,11 +6,11 @@ import { Controller } from 'angular-ecmascript/module-helpers';
 import { Categorias } from '../../../lib/collections';
  
 export default class CategoriasCtrl extends Controller {
-	constructor($stateParams, $timeout, $ionicScrollDelegate, $ionicPopup, $log) {
+	constructor($scope, $stateParams, $ionicPopup) {
 		super(...arguments);
 		this.shouldShowDelete = false;
 		this.shouldShowReorder = false;
-		this.listCanSwipe = true
+		this.listCanSwipe = true;
 		this.helpers({
 			categorias() {
 				console.log(Categorias.find().fetch())
@@ -35,4 +35,4 @@ export default class CategoriasCtrl extends Controller {
 }
 
 CategoriasCtrl.$name = 'CategoriasCtrl';
-CategoriasCtrl.$inject = ['$stateParams', '$timeout', '$ionicScrollDelegate', '$ionicPopup', '$log'];
+CategoriasCtrl.$inject = ['$stateParams', '$ionicPopup'];

@@ -25,6 +25,7 @@ import NuevoAcuerdoCtrl from '../controllers/nuevoAcuerdo.controller';
 import AgendaCtrl from '../controllers/agenda.controller';
 import CategoriasCtrl from '../controllers/categorias.controller';
 import NuevaCategoriaCtrl from '../controllers/nuevaCategoria.controller';
+import PerfilCtrl from '../controllers/perfil.controller';
 
 // Modules
 import RoutesConfig from '../routes';
@@ -139,6 +140,7 @@ Angular.module(App, [
  
 new Loader(App)
 	.load(HomeCtrl)
+	.load(PerfilCtrl)
 	.load(ReunionesCtrl)
 	.load(AcuerdosCtrl)
 	.load(NuevaReunionCtrl)

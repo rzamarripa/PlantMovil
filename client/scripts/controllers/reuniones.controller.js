@@ -10,7 +10,6 @@ export default class ReunionesCtrl extends Controller {
 		super(...arguments);
 		this.helpers({
 			reuniones() {
-				console.log(Reuniones.find().fetch())
 				return Reuniones.find();
 			}
 		});

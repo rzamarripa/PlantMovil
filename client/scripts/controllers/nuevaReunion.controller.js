@@ -8,7 +8,7 @@ export default class NuevaReunionCtrl extends Controller {
 	constructor($scope,$stateParams,$ionicHistory) {
 		super(...arguments);
 		
-		this.reunionId = $stateParams.reunionId
+		this.reunionId = $stateParams.reunionId;
 		this.reunion = Reuniones.findOne(this.reunionId)
 		this.$ionicHistory = $ionicHistory;
 		this.helpers({

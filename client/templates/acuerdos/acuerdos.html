@@ -14,10 +14,20 @@
     <ion-refresher pulling-text="Pull to refresh..." on-refresh="r.doRefresh()">
     </ion-refresher>
 -->
-
-    <div class="entries-list">
-	    Aquí el listado de Acuerdos
-      
-    </div>
+		<ion-list
+          show-delete="ac.shouldShowDelete"
+          show-reorder="ac.shouldShowReorder"
+          can-swipe="ac.listCanSwipe">
+		  <ion-item ng-repeat="acuerdo in ac.acuerdos">
+		    <h2>{{acuerdo.titulo}}<span class="item-note">{{acuerdo.categoria.nombre}}</span></h2>
+		    <p>{{acuerdo.fecha|date:"dd/MM/yyyy"}} {{acuerdo.horaInicio|date:"shortTime"}}</p>
+		    <ion-option-button class="button-royal" ng-click="ac.eliminar(acuerdo)">
+		      Eliminar
+		    </ion-option-button>
+		    <ion-option-button class="button-assertive" ng-click="ac.editar(acuerdo._id)">
+		      Editar
+		    </ion-option-button>		
+		  </ion-item>
+		</ion-list>
   </ion-content>
 </ion-view>

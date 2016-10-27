@@ -17,6 +17,15 @@ export default class RoutesConfig extends Config {
           }
         }
       })
+      .state('app.perfil', {
+        url: '/perfil',
+        views: {
+          'menuContent': {
+            templateUrl: 'client/templates/perfil/perfil.html',
+            controller: 'PerfilCtrl as pc'
+          }
+        }
+      })
       .state('app.reuniones', {
         url: '/reuniones',
         views: {
@@ -55,6 +64,15 @@ export default class RoutesConfig extends Config {
       })
       .state('app.nuevoAcuerdo', {
         url: '/acuerdoNuevo',
+        views: {
+          'menuContent': {
+            templateUrl: 'client/templates/acuerdos/form.html',
+            controller: 'NuevoAcuerdoCtrl as nac'
+          }
+        }
+      })
+      .state('app.editarAcuerdo', {
+        url: '/editarAcuerdo/:acuerdoId',
         views: {
           'menuContent': {
             templateUrl: 'client/templates/acuerdos/form.html',

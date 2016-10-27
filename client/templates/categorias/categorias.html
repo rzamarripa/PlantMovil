@@ -16,25 +16,14 @@
           show-reorder="cc.shouldShowReorder"
           can-swipe="cc.listCanSwipe">
 		  <ion-item ng-repeat="categoria in cc.categorias">
-		
-		    
 		    <h2>{{categoria.nombre}}</h2>
 		    <p>{{categoria.estatus}}</p>
-		    <ion-option-button class="button-positive"
-		                       ng-click="cc.eliminar(categoria)">
+		    <ion-option-button class="button-royal" ng-click="cc.eliminar(categoria)">
 		      Eliminar
 		    </ion-option-button>
-		    <ion-option-button class="button-info"
-		                       ng-click="cc.editar(categoria._id)">
+		    <ion-option-button class="button-assertive" ng-click="cc.editar(categoria._id)">
 		      Editar
-		    </ion-option-button>
-		    <ion-delete-button class="ion-minus-circled"
-		                       ng-click="categoria.splice($index, 1)">
-		    </ion-delete-button>
-		    <ion-reorder-button class="ion-navicon"
-		                        on-reorder="cc.reorderItem(categoria, $fromIndex, $toIndex)">
-		    </ion-reorder-button>
-		
+		    </ion-option-button>		
 		  </ion-item>
 		</ion-list>
 <!--
