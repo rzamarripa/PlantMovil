@@ -3,7 +3,8 @@
     <button menu-toggle="right" class="button button-clear button-positive" ng-click='nrc.save()'>Guardar</button>
   </ion-nav-buttons>
   <ion-nav-title>
-    <span>Nueva Reunión</span>
+    <span ng-if="!nrc.reunionId">Nueva Reunión</span>
+    <span ng-if="nrc.reunionId">Editar Reunión</span>
   </ion-nav-title>
   <ion-content>
     <ul class="list list-inset">

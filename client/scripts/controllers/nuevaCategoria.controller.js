@@ -8,7 +8,7 @@ export default class NuevaCategoriaCtrl extends Controller {
 	constructor($scope,$stateParams,$ionicHistory) {
 		super(...arguments);
 		console.log($stateParams,$ionicHistory);
-		this.cateogriaId = $stateParams.categoriaId
+		this.categoriaId = $stateParams.categoriaId
 		this.categoria = Categorias.findOne(this.categoriaId)
 		this.$ionicHistory = $ionicHistory;
 		this.helpers({

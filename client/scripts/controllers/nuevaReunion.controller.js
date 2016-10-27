@@ -7,7 +7,7 @@ import { Reuniones } from '../../../lib/collections';
 export default class NuevaReunionCtrl extends Controller {
 	constructor($scope,$stateParams,$ionicHistory) {
 		super(...arguments);
-		console.log($stateParams,$ionicHistory);
+		
 		this.reunionId = $stateParams.reunionId
 		this.reunion = Reuniones.findOne(this.reunionId)
 		this.$ionicHistory = $ionicHistory;

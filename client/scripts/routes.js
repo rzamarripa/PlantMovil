@@ -88,6 +88,15 @@ export default class RoutesConfig extends Config {
             controller: 'NuevaCategoriaCtrl as ncc'
           }
         }
+      })
+      .state('app.editarCategoria', {
+        url: '/editarCategoria/:categoriaId',
+        views: {
+          'menuContent': {
+            templateUrl: 'client/templates/categorias/form.html',
+            controller: 'NuevaCategoriaCtrl as ncc'
+          }
+        }
       });
  
     this.$urlRouterProvider.otherwise('app/home');
