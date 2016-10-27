@@ -61,7 +61,7 @@ import {NodePushServerFactory} from '../factories/nodePushServer.factory';
 
 
 
-const App = 'MasoftTemplate';
+const App = 'MisReuniones';
  
 // App
 Angular.module(App, [

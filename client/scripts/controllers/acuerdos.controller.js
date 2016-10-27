@@ -10,7 +10,6 @@ export default class AcuerdosCtrl extends Controller {
 	constructor($scope,$stateParams,$ionicPopup) {
 		super(...arguments);
 		this.shouldShowDelete = false;
-		this.shouldShowReorder = false;
 		this.listCanSwipe = true;
 		this.helpers({
 			acuerdos() {
@@ -27,7 +26,8 @@ export default class AcuerdosCtrl extends Controller {
 		});
 	}
 	
-	eliminar(categoria){
+	eliminar(acuerdo){
+/*
 		var confirmPopup = $ionicPopup.confirm({
 			title: categoria.nombre,
 			template: 'Estás seguro que quiere eliminarla?'
@@ -35,10 +35,15 @@ export default class AcuerdosCtrl extends Controller {
 		
 		confirmPopup.then(function(res) {
 			if(res) {
-				Categorias.update(categoria_id, { $set : {estatus : false}});		
+				
 			}
 		});
-		
+*/
+		Categorias.update(acuerdo._id, { $set : {estatus : false}});		
+	}
+	
+	doRefresh(){
+		alert("refresh");
 	}
 }
 

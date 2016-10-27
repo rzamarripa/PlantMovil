@@ -13,7 +13,7 @@ export default class RoutesConfig extends Config {
         views: {
           'menuContent': {
             templateUrl: 'client/templates/home/home.html',
-            controller: 'HomeCtrl'
+            controller: 'HomeCtrl as hc'
           }
         }
       })

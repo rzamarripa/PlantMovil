@@ -3,11 +3,10 @@
     <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
   </ion-nav-buttons>
   <ion-nav-title>
-    <span>Menú</span>
+    <span>Resumen</span>
   </ion-nav-title>
   <ion-content>
-    <!-- Refresh to get the new posts -->
-    <ion-refresher pulling-text="Pull to refresh..." on-refresh="r.doRefresh()">
+    <ion-refresher pulling-text="Deslice para refrescar..." on-refresh="hc.doRefresh()">
     </ion-refresher>
 
     <div class="card">
@@ -19,27 +18,27 @@
 			  <a href="#" class="item item-icon-left">
 			    <i class="icon fa fa-calendar-minus-o"></i>
 			    Vencidos
-			    <span class="badge badge-assertive">0</span>
+			    <span class="badge badge-assertive">{{hc.acuerdosVencidos}}</span>
 			  </a>			
 			  <a href="#" class="item item-icon-left">
 			    <i class="icon fa fa-calendar-check-o"></i>
 			    Hoy
-			    <span class="badge badge-assertive">0</span>
+			    <span class="badge badge-assertive">{{hc.acuerdosHoy}}</span>
 			  </a>			
 			  <a href="#" class="item item-icon-left">
 			    <i class="icon fa fa-calendar-o"></i>
 			    Semana
-			    <span class="badge badge-assertive">0</span>
+			    <span class="badge badge-assertive">{{hc.acuerdosSemana}}</span>
 			  </a>			
 			  <a href="#" class="item item-icon-left">
 			    <i class="icon fa fa-calendar"></i>
 			    Mes
-			    <span class="badge badge-assertive">0</span>
+			    <span class="badge badge-assertive">{{hc.acuerdosMes}}</span>
 			  </a>			  
 			  <a href="#" class="item item-icon-left">
 			    <i class="icon fa fa-calendar-plus-o"></i>
 			    Futuros
-			    <span class="badge badge-assertive">0</span>
+			    <span class="badge badge-assertive">{{hc.acuerdosFuturos}}</span>
 			  </a>			
 			</div>
 		
